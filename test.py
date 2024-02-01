@@ -55,38 +55,38 @@ cursor = db.cursor()
 # cursor.execute(sql_create_function)
 
 
-sql_create_procedure = """
-
-        CREATE PROCEDURE ChangePassword(
-            IN p_userID INT,
-            IN p_password VARCHAR(255),
-            IN p_new_password VARCHAR(255)
-        )
-        BEGIN
-            DECLARE v_count INT;
-
-            -- Check if the provided userID and password match a record in the customers table
-            SELECT COUNT(*) INTO v_count
-            FROM customers
-            WHERE userID = p_userID AND password = p_password;
-
-            -- If a match is found, update the password with the new password
-            IF v_count > 0 THEN
-                UPDATE customers
-                SET password = p_new_password
-                WHERE userID = p_userID;
-
-                SELECT 'Password changed successfully.' AS message;
-            ELSE
-                SELECT 'Invalid credentials.' AS message;
-            END IF;
-        END
-        """
-
-# Execute the SQL query to create the procedure
-cursor.execute(sql_create_procedure)
-
-print("Procedure created successfully.")
+# sql_create_procedure = """
+#
+#         CREATE PROCEDURE ChangePassword(
+#             IN p_userID INT,
+#             IN p_password VARCHAR(255),
+#             IN p_new_password VARCHAR(255)
+#         )
+#         BEGIN
+#             DECLARE v_count INT;
+#
+#             -- Check if the provided userID and password match a record in the customers table
+#             SELECT COUNT(*) INTO v_count
+#             FROM customers
+#             WHERE userID = p_userID AND password = p_password;
+#
+#             -- If a match is found, update the password with the new password
+#             IF v_count > 0 THEN
+#                 UPDATE customers
+#                 SET password = p_new_password
+#                 WHERE userID = p_userID;
+#
+#                 SELECT 'Password changed successfully.' AS message;
+#             ELSE
+#                 SELECT 'Invalid credentials.' AS message;
+#             END IF;
+#         END
+#         """
+#
+# # Execute the SQL query to create the procedure
+# cursor.execute(sql_create_procedure)
+#
+# print("Procedure created successfully.")
 
 db.commit()
 
