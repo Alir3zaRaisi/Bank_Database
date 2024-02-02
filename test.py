@@ -88,6 +88,18 @@ cursor = db.cursor()
 #
 # print("Procedure created successfully.")
 
+
+# sql_account_credentials_procedure = """
+#     CREATE PROCEDURE GetAccountCredentials(IN p_userID INT)
+#         BEGIN
+#             SELECT account_number, balance, status
+#             FROM accounts
+#             WHERE userID = p_userID;
+#         END
+# """
+# cursor.execute(sql_account_credentials_procedure)
+
+
 db.commit()
 
 cursor.close()
