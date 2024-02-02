@@ -99,17 +99,35 @@ cursor = db.cursor()
 # """
 # cursor.execute(sql_account_credentials_procedure)
 
-sql_account_info_procedure = """
-    CREATE PROCEDURE GetAccountInfo(IN p_account_number INT)
-        BEGIN
-            SELECT a.account_number, a.balance, a.status, c.first_name, c.last_name
-            FROM accounts a
-            INNER JOIN customers c ON a.userID = c.userID
-            WHERE userID = p_userID;
-        END
+# sql_account_info_procedure = """
+#     CREATE PROCEDURE GetAccountInfo(IN p_account_number INT)
+#         BEGIN
+#             SELECT a.account_number, a.balance, a.status, c.firstname, c.lastname
+#             FROM accounts a
+#             INNER JOIN customers c ON a.userID = c.userID
+#             WHERE userID = p_userID;
+#         END
+# """
+#
+# cursor.execute(sql_account_info_procedure)
+
+
+sql_account_name_function = """
+    CREATE FUNCTION GetOwnerNameForAccount(p_account_number INT)
+    RETURNS VARCHAR(255)
+    READS SQL DATA
+    BEGIN
+        DECLARE owner_name VARCHAR(255);
+        SELECT CONCAT(c.firstname, ' ', c.lastname) INTO owner_name
+        FROM accounts a
+        INNER JOIN customers c ON a.userID = c.userID
+        WHERE a.account_number = p_account_number;
+        RETURN owner_name;
+    END 
 """
 
-cursor.execute(sql_account_info_procedure)
+cursor.execute(sql_account_name_function)
+
 
 db.commit()
 
