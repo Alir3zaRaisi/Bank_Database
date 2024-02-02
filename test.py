@@ -133,6 +133,36 @@ cursor = db.cursor()
 #     ADD COLUMN creation_date DATE;
 # """)
 
+# cursor.execute("""
+#     CREATE TABLE transactions(
+#     transaction_number INT AUTO_INCREMENT PRIMARY KEY,
+#     source_number INT,
+#     destination_number INT,
+#     amount INT check ( amount > 0 ),
+#     date DATE,
+#     FOREIGN KEY (source_number) REFERENCES accounts (account_number) ON DELETE SET NULL,
+#     FOREIGN KEY (destination_number) REFERENCES accounts(account_number) ON DELETE set null
+#     )
+# """)
+#
+# cursor.execute("""
+#     CREATE TABLE Loans(
+#     loan_number INT AUTO_INCREMENT PRIMARY KEY,
+#     account_number INT,
+#     amount INT check ( amount > 0 ),
+#     payment_amount INT check ( payment_amount > 0 ),
+#     FOREIGN KEY (account_number) REFERENCES accounts(account_number) ON DELETE SET NULL
+#     )
+# """)
+#
+# cursor.execute("""
+#     CREATE TABLE loan_payment(
+#     loan_number INT,
+#     payment_date DATE,
+#     FOREIGN KEY (loan_number) REFERENCES loans(loan_number)
+#     )
+# """)
+
 db.commit()
 
 cursor.close()
