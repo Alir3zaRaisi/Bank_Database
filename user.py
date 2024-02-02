@@ -76,6 +76,27 @@ def get_account_info(account_number):
         print(f"Error: {err}")
 
 
+def transfer_amount(source_account_id, destination_account_id, amount):
+    try:
+        conn, cursor = connect()
+        # Call the stored procedure
+        cursor.callproc("TransferAmount", (source_account_id, destination_account_id, amount))
+
+        # Fetch the result of the procedure call
+        for result in cursor.stored_results():
+            for row in result.fetchall():
+                print(row)
+
+        # Commit the changes
+        conn.commit()
+
+    except mysql.connector.Error as err:
+        # Handle errors
+        print("Error:", err)
+        # Rollback the transaction in case of an error
+        conn.rollback()
+
+
 # Example usage:
 username = "example_username"
 password = "example_password"

@@ -163,6 +163,51 @@ cursor = db.cursor()
 #     )
 # """)
 
+
+# sql_transaction_procedure = """
+# CREATE PROCEDURE TransferAmount(
+#     IN p_source_account_id INT,
+#     IN p_destination_account_id INT,
+#     IN p_amount INT
+# )
+# BEGIN
+#     DECLARE source_balance INT;
+#
+#     -- Start transaction
+#     START TRANSACTION;
+#
+#     -- Get balance of the source account
+#     SELECT balance INTO source_balance
+#     FROM accounts
+#     WHERE account_number = p_source_account_id;
+#
+#     -- Check if the source account has sufficient balance
+#     IF source_balance >= p_amount THEN
+#         -- Subtract the amount from the source account
+#         UPDATE accounts
+#         SET balance = balance - p_amount
+#         WHERE account_number = p_source_account_id;
+#
+#         -- Add the amount to the destination account
+#         UPDATE accounts
+#         SET balance = balance + p_amount
+#         WHERE account_number = p_destination_account_id;
+#
+#         -- Commit the transaction
+#         COMMIT;
+#
+#         SELECT 'Transaction Successful' AS result;
+#     ELSE
+#         -- Rollback the transaction
+#         ROLLBACK;
+#
+#         SELECT 'Insufficient Balance' AS result;
+#     END IF;
+# END
+# """
+#
+# cursor.execute(sql_transaction_procedure)
+
 db.commit()
 
 cursor.close()
