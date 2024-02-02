@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>userMainMenu</class>
+ <widget class="QWidget" name="userMainMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="choose_lbl">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>please click on one of the following options:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="action_cmb">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>73</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>change password</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>recent transactions</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>transactions - time based</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>account's info</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>account's owner</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>block account</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>transfer</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>get new loan</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>current loans</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>instalments</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="action_pbn">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>210</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>100</y>
+     <width>190</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="chosenAction_lyt">
+    <item row="0" column="0">
+     <widget class="QLabel" name="new_password_lbl">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>new password:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="new_password_led">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="action_done_pbn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>DONE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="number_lbl">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>number:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="number_led">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="balance_lyt">
+    <item>
+     <widget class="QLabel" name="const_lbl">
+      <property name="text">
+       <string>current balance:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="balance_lbl">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

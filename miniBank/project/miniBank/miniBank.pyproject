@@ -1,0 +1,8 @@
+{
+    "files": [
+        "myclass.py",
+        "ui_chooseAccount.py",
+        "ui_mainPage.py",
+        "ui_wrongPass.py"
+    ]
+}
