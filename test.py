@@ -208,6 +208,50 @@ cursor = db.cursor()
 #
 # cursor.execute(sql_transaction_procedure)
 
+# sql_function_loan_points = """
+#     CREATE FUNCTION calculate_loan_points(p_account_number INT)
+#     RETURNS INT
+#     BEGIN
+#         DECLARE total_income INT;
+#         DECLARE total_expense INT;
+#         DECLARE two_months_ago DATE;
+#
+#         -- Get the date two months ago
+#         SET two_months_ago = DATE_SUB(CURDATE(), INTERVAL 2 MONTH);
+#
+#         -- Calculate total income for the past two months
+#         SELECT COALESCE(SUM(amount), 0) INTO total_expense
+#         FROM transactions
+#         WHERE source_number = p_account_number
+#         AND transaction_date >= two_months_ago;
+#
+#         -- Calculate total expense for the past two months
+#         SELECT COALESCE(SUM(amount), 0) INTO total_income
+#         FROM transactions
+#         WHERE destination_number = p_account_number
+#         AND transaction_date >= two_months_ago;
+#
+#         -- Return net value (income - expense)
+#         RETURN total_income - total_expense;
+#     END;
+# """
+
+
+sql_last_n_transactions_account_procedure = """
+    CREATE PROCEDURE GetLastNTransactionsForAccount(
+        IN p_account_number INT,
+        IN p_n INT
+    )
+    BEGIN
+        SELECT transaction_number, source_number, destination_number, amount, date
+        FROM transactions
+        WHERE source_number = p_account_number OR destination_number = p_account_number
+        ORDER BY date DESC
+        LIMIT p_n;
+END
+"""
+cursor.execute(sql_last_n_transactions_account_procedure)
+
 db.commit()
 
 cursor.close()
