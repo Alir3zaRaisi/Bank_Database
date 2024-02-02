@@ -52,10 +52,22 @@ def change_password(user_id, current_password, new_password):
         return "Error occurred while changing password."
 
 
-def call_stored_procedure(user_id):
+def get_account_credentials(user_id):
     try:
         conn, cursor = connect()
         cursor.callproc("GetAccountCredentials", (user_id,))
+        result = cursor.stored_results()
+        for rs in result:
+            for row in rs.fetchall():
+                print(row)
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+
+
+def get_account_info(account_number):
+    try:
+        conn, cursor = connect()
+        cursor.callproc("GetAccountInfoWithOwnerName", (account_number,))
         result = cursor.stored_results()
         for rs in result:
             for row in rs.fetchall():
