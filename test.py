@@ -4,7 +4,7 @@ db = mysql.connector.connect(
     host="localhost",
     user="alireza",
     passwd="alireza",
-    database="Bank"
+    database="bank"
 )
 
 cursor = db.cursor()
@@ -29,30 +29,33 @@ cursor = db.cursor()
 #     );
 # """)
 
+#
 
-# sql_create_function = """
-#     CREATE FUNCTION CheckCredentials(p_username VARCHAR(255), p_password VARCHAR(255))
-#     RETURNS VARCHAR(255)
-#     DETERMINISTIC
+# sql_create_procedure = """
+# CREATE PROCEDURE `CheckCredentials`(IN p_username VARCHAR(255), IN p_password VARCHAR(255), OUT p_full_name VARCHAR(255), OUT p_user_id INT)
 #     BEGIN
-#         DECLARE v_user_name VARCHAR(255);
+#     DECLARE v_user_name VARCHAR(255);
+#     DECLARE v_user_id INT;
 #
-#         -- Retrieve the concatenated first name and last name if the provided username and password match
-#         SELECT CONCAT(firstname, ' ', lastname) INTO v_user_name
-#         FROM customers
-#         WHERE username = p_username AND password = p_password;
+#     -- Retrieve the concatenated first name and last name and the user ID if the provided username and password match
+#     SELECT CONCAT(firstname, ' ', lastname), userID INTO v_user_name, v_user_id
+#     FROM customers
+#     WHERE username = p_username AND password = p_password;
 #
-#         -- If a record with the provided username and password exists, return the concatenated name, otherwise return NULL
-#         IF v_user_name IS NOT NULL THEN
-#             RETURN v_user_name;
-#         ELSE
-#             RETURN NULL;
-#         END IF;
+#     -- If a record with the provided username and password exists, set the output parameters, otherwise set them to NULL
+#     IF v_user_name IS NOT NULL THEN
+#         SET p_full_name = v_user_name;
+#         SET p_user_id = v_user_id;
+#     ELSE
+#         SET p_full_name = NULL;
+#         SET p_user_id = NULL;
+#     END IF;
 #     END
+#
 #     """
 #
 # # Execute the SQL query to create the function
-# cursor.execute(sql_create_function)
+# cursor.execute(sql_create_procedure)
 
 
 # sql_create_procedure = """
@@ -237,23 +240,47 @@ cursor = db.cursor()
 # """
 
 
-sql_last_n_transactions_account_procedure = """
-    CREATE PROCEDURE GetLastNTransactionsForAccount(
-        IN p_account_number INT,
-        IN p_n INT
-    )
-    BEGIN
-        SELECT transaction_number, source_number, destination_number, amount, date
-        FROM transactions
-        WHERE source_number = p_account_number OR destination_number = p_account_number
-        ORDER BY date DESC
-        LIMIT p_n;
-END
-"""
-cursor.execute(sql_last_n_transactions_account_procedure)
+# sql_last_n_transactions_account_procedure = """
+#     CREATE PROCEDURE GetLastNTransactionsForAccount(
+#         IN p_account_number INT,
+#         IN p_n INT
+#     )
+#     BEGIN
+#         SELECT transaction_number, source_number, destination_number, amount, date
+#         FROM transactions
+#         WHERE source_number = p_account_number OR destination_number = p_account_number
+#         ORDER BY date DESC
+#         LIMIT p_n;
+# END
+# """
+# cursor.execute(sql_last_n_transactions_account_procedure)
 
-db.commit()
+# cursor.execute("select CheckCredentials(%s,%s)", ("ali", "123"))
+# result = cursor.fetchone()[0]
+# print(result)
+
+
+# statements = [
+#     "set @p_full_name = '0';",
+#     "set @p_user_id = 0;",
+#     "call bank.CheckCredentials('ali', '123', @p_full_name, @p_user_id);",
+#     "select @p_full_name, @p_user_id;"
+# ]
+#
+# for statement in statements:
+#     cursor.execute(statement)
+
+
+# Call the stored procedure
+cursor.callproc('bank.CheckCredentials', ('ali', '234'))
+
+result = cursor.stored_results()
+
+for row in result:
+    name, userid = row.fetchall()[0]
+
+print(name)
+# db.commit()
 
 cursor.close()
 db.close()
-

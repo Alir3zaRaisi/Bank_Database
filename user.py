@@ -3,28 +3,31 @@ import mysql.connector
 
 def connect():
     conn = mysql.connector.connect(
-        host="your_host",
-        user="your_username",
-        password="your_password",
-        database="your_database"
+        host="localhost",
+        user="alireza",
+        passwd="alireza",
+        database="Bank"
     )
     cursor = conn.cursor()
     return conn, cursor
 
 
 def check_credentials(username, password):
-    # Connect to your MySQL database
     conn, cursor = connect()
+    try:
+        cursor.callproc('bank.CheckCredentials', (username, password))
 
-    # Execute the SQL query that calls the CheckCredentials function
-    cursor.callproc("CheckCredentials", (username, password))
-    result = cursor.fetchone()[0]
+        result = cursor.stored_results()
+
+        for row in result:
+            return row.fetchall()[0]
+
+    except mysql.connector.Error as err:
+        print("Error calling stored procedure:", err)
 
     # Close the cursor and connection
     cursor.close()
     conn.close()
-
-    return result
 
 
 def change_password(user_id, current_password, new_password):
@@ -57,9 +60,13 @@ def get_account_credentials(user_id):
         conn, cursor = connect()
         cursor.callproc("GetAccountCredentials", (user_id,))
         result = cursor.stored_results()
+        cursor.close()
+        conn.close()
+        accounts = []
         for rs in result:
             for row in rs.fetchall():
-                print(row)
+                accounts.append(row)
+        return accounts
     except mysql.connector.Error as err:
         print(f"Error: {err}")
 
@@ -98,18 +105,18 @@ def transfer_amount(source_account_id, destination_account_id, amount):
 
 
 # Example usage:
-username = "example_username"
-password = "example_password"
-name = check_credentials(username, password)
+username = "ali"
+password = "123"
+check_credentials(username, password)
 
-if name is not None:
-    print("Welcome,", name)
-else:
-    print("Invalid credentials")
+# if name is not None:
+#     print("Welcome,", name)
+# else:
+#     print("Invalid credentials")
 
-# Example usage:
-user_id = 1
-current_password = "current_password"
-new_password = "new_password"
-result_message = change_password(user_id, current_password, new_password)
-print("Result:", result_message)
+# # Example usage:
+# user_id = 1
+# current_password = "current_password"
+# new_password = "new_password"
+# result_message = change_password(user_id, current_password, new_password)
+# print("Result:", result_message)

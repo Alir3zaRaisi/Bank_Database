@@ -8,15 +8,13 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
+from PySide2 import QtWidgets
 from PySide2.QtCore import *
-from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-
-from PySide2 import QtWidgets
-from ui_wrongPass import Ui_wrongPass
-
+import user
 from ui_chooseAccount import Ui_chooseAccount
+from ui_wrongPass import Ui_wrongPass
 
 
 class Ui_MainWindow(object):
@@ -101,31 +99,32 @@ class Ui_MainWindow(object):
         username_ui = self.username_led.text()
         password_ui = self.password_led.text()
 
-        #alireza
-            #get user data and set it for user
+        # alireza
+        # get user data and set it for user
+        result = user.check_credentials(username_ui, password_ui)
+        full_name, user_id = result
+        print(full_name)
+        if full_name is not None:
+            # if user and password are right
+            self.ex = Ui_chooseAccount()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            # update name
+            self.ex.welcome_lbl.setText(self.ex.welcome_lbl.text() + " " + full_name)
+            # update users accounts
+            accounts = user.get_account_credentials(user_id)
+            # must be filled with users accounts
+            for account in accounts:
+                self.ex.choose_account_cmb.addItem(f'{account[0]}')
+                # print(account)
+        else:
+            # if user or password is wrong
+            self.ex = Ui_wrongPass()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            self.w.show()
 
-        #if user or password is wrong
-        self.ex = Ui_wrongPass()
-        self.w = QtWidgets.QWidget()
-        self.ex.setupUi(self.w)
-        self.w.show()
-
-        #if user and password are right
-        self.ex = Ui_chooseAccount()
-        self.w = QtWidgets.QWidget()
-        self.ex.setupUi(self.w)
-            #update name
-        self.ex.welcome_lbl.setText(self.ex.welcome_lbl.text() + " ali!")
-            #update users accounts
-            #must be filled with users accounts
-        self.ex.choose_account_cmb.addItem("123")
-        self.ex.choose_account_cmb.addItem("456")
-
-            #refresh ui
+            # refresh ui
         self.ex.retranslateUi
 
         self.w.show()
-
-
-
-
