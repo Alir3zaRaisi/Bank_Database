@@ -17,6 +17,7 @@ class Ui_wrongPass(object):
     def setupUi(self, wrongPass):
         if not wrongPass.objectName():
             wrongPass.setObjectName(u"wrongPass")
+        wrongPass.setWindowModality(Qt.WindowModal)
         wrongPass.resize(400, 300)
         self.verticalLayoutWidget = QWidget(wrongPass)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")

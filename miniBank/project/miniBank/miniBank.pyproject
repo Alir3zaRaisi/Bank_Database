@@ -2,7 +2,12 @@
     "files": [
         "myclass.py",
         "ui_chooseAccount.py",
+        "ui_infoBox.py",
         "ui_mainPage.py",
-        "ui_wrongPass.py"
+        "ui_signUp.py",
+        "ui_signUpResult.py",
+        "ui_userMainMenu.py",
+        "ui_wrongPass.py",
+        "user.py"
     ]
 }

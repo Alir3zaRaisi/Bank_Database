@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>733</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,8 +30,8 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>130</y>
-     <width>73</width>
+     <y>140</y>
+     <width>161</width>
      <height>22</height>
     </rect>
    </property>
@@ -90,7 +90,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>210</y>
+     <y>220</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -102,17 +102,17 @@
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>222</x>
      <y>100</y>
-     <width>190</width>
-     <height>171</height>
+     <width>451</width>
+     <height>261</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="chosenAction_lyt">
     <item row="0" column="0">
      <widget class="QLabel" name="new_password_lbl">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="text">
        <string>new password:</string>
@@ -122,11 +122,11 @@
     <item row="0" column="1">
      <widget class="QLineEdit" name="new_password_led">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
+    <item row="7" column="0">
      <spacer name="horizontalSpacer">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -139,10 +139,10 @@
       </property>
      </spacer>
     </item>
-    <item row="2" column="1">
+    <item row="7" column="1">
      <widget class="QPushButton" name="action_done_pbn">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="text">
        <string>DONE</string>
@@ -152,7 +152,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="number_lbl">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="text">
        <string>number:</string>
@@ -162,7 +162,92 @@
     <item row="1" column="1">
      <widget class="QLineEdit" name="number_led">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="start_date_lbl">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>start date: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="end_date_lbl">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>end date: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="start_date_led">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="end_date_led">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="account_number_lbl">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>account number: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="account_number_led">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="amount_lbl">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>amount: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="amount_led">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="loan_lbl">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>select loan: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="loan_cmb">
+      <property name="enabled">
+       <bool>true</bool>
       </property>
      </widget>
     </item>

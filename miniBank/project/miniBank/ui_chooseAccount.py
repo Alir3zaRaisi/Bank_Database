@@ -12,6 +12,8 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+from PySide2 import QtWidgets
+from ui_userMainMenu import Ui_userMainMenu
 
 class Ui_chooseAccount(object):
     def setupUi(self, chooseAccount):
@@ -31,6 +33,9 @@ class Ui_chooseAccount(object):
         self.OK_pbn.setObjectName(u"OK_pbn")
         self.OK_pbn.setGeometry(QRect(280, 240, 93, 28))
 
+        #connect
+        self.OK_pbn.clicked.connect(self.accountChosen)
+
         self.retranslateUi(chooseAccount)
 
         QMetaObject.connectSlotsByName(chooseAccount)
@@ -43,3 +48,14 @@ class Ui_chooseAccount(object):
         self.OK_pbn.setText(QCoreApplication.translate("chooseAccount", u"OK", None))
     # retranslateUi
 
+    @Slot()
+    def accountChosen(self):
+        self.ex = Ui_userMainMenu()
+        self.w = QtWidgets.QWidget()
+        self.ex.setupUi(self.w)
+        self.w.show()
+
+        # refresh ui
+        self.ex.retranslateUi
+
+        self.w.show()
