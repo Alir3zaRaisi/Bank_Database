@@ -113,6 +113,7 @@ class Ui_MainWindow(object):
             self.ex.welcome_lbl.setText(self.ex.welcome_lbl.text() + " " + full_name)
             # update users accounts
             accounts = user.get_account_credentials(user_id)
+            # account_number, balance, status
             # must be filled with users accounts
             for account in accounts:
                 self.ex.choose_account_cmb.addItem(f'{account[0]}')
