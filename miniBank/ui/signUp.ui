@@ -16,35 +16,24 @@
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>120</y>
+     <x>100</x>
+     <y>60</y>
      <width>191</width>
-     <height>123</height>
+     <height>168</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="username_lbl">
-      <property name="text">
-       <string>username</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
+    <item row="3" column="0">
      <widget class="QLabel" name="password_lbl">
       <property name="text">
        <string>password</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="accountNumber_lbl">
-      <property name="text">
-       <string>accountNumber</string>
-      </property>
-     </widget>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="password_led"/>
     </item>
-    <item row="3" column="0">
+    <item row="6" column="0">
      <spacer name="horizontalSpacer">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -57,21 +46,42 @@
       </property>
      </spacer>
     </item>
-    <item row="3" column="1">
+    <item row="6" column="1">
      <widget class="QPushButton" name="signUp_pbn">
       <property name="text">
        <string>sign up!</string>
       </property>
      </widget>
     </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="first_name_lbl">
+      <property name="text">
+       <string>firstname</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="username_led"/>
+     <widget class="QLineEdit" name="first_name_led"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="last_name_lbl">
+      <property name="text">
+       <string>lastname</string>
+      </property>
+     </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="password_led"/>
+     <widget class="QLineEdit" name="last_name_led"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="username_lbl">
+      <property name="text">
+       <string>username</string>
+      </property>
+     </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="accountNumber_led"/>
+     <widget class="QLineEdit" name="username_led"/>
     </item>
    </layout>
   </widget>
