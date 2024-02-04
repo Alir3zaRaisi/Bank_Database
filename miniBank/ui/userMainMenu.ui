@@ -235,21 +235,28 @@
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="loan_lbl">
+     <widget class="QLabel" name="loan_point_lbl">
       <property name="enabled">
        <bool>true</bool>
       </property>
       <property name="text">
-       <string>select loan: </string>
+       <string>loan point: </string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QComboBox" name="loan_cmb">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="loan_amount_lbl">
+        <property name="text">
+         <string>loan amount: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="loan_amount_led"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

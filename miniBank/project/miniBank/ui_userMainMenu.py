@@ -32,9 +32,11 @@ class Ui_userMainMenu(object):
         self.account_number_led.hide()
         self.amount_lbl.hide()
         self.amount_led.hide()
-        self.loan_lbl.hide()
-        self.loan_cmb.hide()
+        self.loan_point_lbl.hide()
+        self.loan_amount_lbl.hide()
+        self.loan_amount_led.hide()
         self.action_done_pbn.hide()
+
 
     def setupUi(self, userMainMenu):
         if not userMainMenu.objectName():
@@ -147,17 +149,26 @@ class Ui_userMainMenu(object):
 
         self.chosenAction_lyt.setWidget(5, QFormLayout.FieldRole, self.amount_led)
 
-        self.loan_lbl = QLabel(self.formLayoutWidget)
-        self.loan_lbl.setObjectName(u"loan_lbl")
-        self.loan_lbl.setEnabled(True)
+        self.loan_point_lbl = QLabel(self.formLayoutWidget)
+        self.loan_point_lbl.setObjectName(u"loan_point_lbl")
+        self.loan_point_lbl.setEnabled(True)
 
-        self.chosenAction_lyt.setWidget(6, QFormLayout.LabelRole, self.loan_lbl)
+        self.chosenAction_lyt.setWidget(6, QFormLayout.LabelRole, self.loan_point_lbl)
 
-        self.loan_cmb = QComboBox(self.formLayoutWidget)
-        self.loan_cmb.setObjectName(u"loan_cmb")
-        self.loan_cmb.setEnabled(True)
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.loan_amount_lbl = QLabel(self.formLayoutWidget)
+        self.loan_amount_lbl.setObjectName(u"loan_amount_lbl")
 
-        self.chosenAction_lyt.setWidget(6, QFormLayout.FieldRole, self.loan_cmb)
+        self.horizontalLayout.addWidget(self.loan_amount_lbl)
+
+        self.loan_amount_led = QLineEdit(self.formLayoutWidget)
+        self.loan_amount_led.setObjectName(u"loan_amount_led")
+
+        self.horizontalLayout.addWidget(self.loan_amount_led)
+
+
+        self.chosenAction_lyt.setLayout(6, QFormLayout.FieldRole, self.horizontalLayout)
 
         self.horizontalLayoutWidget = QWidget(userMainMenu)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
@@ -177,15 +188,12 @@ class Ui_userMainMenu(object):
 
 
         self.hideAll()
-
-        #connect
+               #connect
         self.action_pbn.clicked.connect(self.actionChosen)
         self.action_done_pbn.clicked.connect(self.doAction)
 
+
         self.retranslateUi(userMainMenu)
-
-
-
 
         QMetaObject.connectSlotsByName(userMainMenu)
     # setupUi
@@ -212,12 +220,11 @@ class Ui_userMainMenu(object):
         self.end_date_lbl.setText(QCoreApplication.translate("userMainMenu", u"end date: ", None))
         self.account_number_lbl.setText(QCoreApplication.translate("userMainMenu", u"account number: ", None))
         self.amount_lbl.setText(QCoreApplication.translate("userMainMenu", u"amount: ", None))
-        self.loan_lbl.setText(QCoreApplication.translate("userMainMenu", u"select loan: ", None))
+        self.loan_point_lbl.setText(QCoreApplication.translate("userMainMenu", u"loan point: ", None))
+        self.loan_amount_lbl.setText(QCoreApplication.translate("userMainMenu", u"loan amount: ", None))
         self.const_lbl.setText(QCoreApplication.translate("userMainMenu", u"current balance:", None))
         self.balance_lbl.setText(QCoreApplication.translate("userMainMenu", u"0", None))
     # retranslateUi
-
-
 
     @Slot()
     def doAction(self):
@@ -283,16 +290,18 @@ class Ui_userMainMenu(object):
 
 
         if currentAction == "get new loan":
-            chosen_loan = self.loan_led.text()
+            chosen_loan = self.loan_amount_led.text()
             #alireza
-            #store loan
+            #check loan
             self.ex = Ui_infoBox()
             self.w = QtWidgets.QWidget()
             self.ex.setupUi(self.w)
 
             #alireza
             # one of the following must be shown
+            #if can recieve loan
             self.ex.label.setText("loan recieved")
+            #if can't recieve loan
             self.ex.label.setText("loan failed")
 
         if currentAction == "current loans":
@@ -372,10 +381,13 @@ class Ui_userMainMenu(object):
         if currentAction == "get new loan":
             self.hideAll()
             self.action_done_pbn.show()
-            self.loan_lbl.show()
-            self.loan_cmb.show()
+            self.loan_point_lbl.show()
+            self.loan_amount_lbl.show()
+            self.loan_amount_led.show()
             #alireza
-            #available loans must be inserted into self.loan_cmb
+            #loan point must be calulated
+            #must update loan_point_lbl by the value calculated in last step
+            #must store new loan if user presses done button
 
         if currentAction == "current loans":
             self.hideAll()
@@ -384,3 +396,4 @@ class Ui_userMainMenu(object):
         if currentAction == "instalments":
             self.hideAll()
             self.action_done_pbn.show()
+
