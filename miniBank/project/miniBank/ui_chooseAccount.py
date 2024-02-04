@@ -16,6 +16,7 @@ from PySide2 import QtWidgets
 from ui_userMainMenu import Ui_userMainMenu
 
 class Ui_chooseAccount(object):
+    owner_name = "default name"
     def setupUi(self, chooseAccount):
         if not chooseAccount.objectName():
             chooseAccount.setObjectName(u"chooseAccount")
@@ -46,11 +47,15 @@ class Ui_chooseAccount(object):
         self.choose_account_lbl.setText(QCoreApplication.translate("chooseAccount", u"please choose your preferred account:", None))
         self.welcome_lbl.setText(QCoreApplication.translate("chooseAccount", u"welcome", None))
         self.OK_pbn.setText(QCoreApplication.translate("chooseAccount", u"OK", None))
+        self.welcome_lbl.setText("welcome " + self.owner_name + "!")
     # retranslateUi
 
     @Slot()
     def accountChosen(self):
+        account_index = self.choose_account_cmb.currentIndex()
+
         self.ex = Ui_userMainMenu()
+        self.ex.account_index = account_index
         self.w = QtWidgets.QWidget()
         self.ex.setupUi(self.w)
         self.w.show()

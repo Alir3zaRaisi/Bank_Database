@@ -125,17 +125,21 @@ class Ui_MainWindow(object):
      #for front-end testing
      full_name = None
      if username_ui == 'root' and password_ui == 'root':
-         full_name = 'rootName'
+         full_name = 'new root name'
      #end front-end testing
+
+     #alireza
+     #must retrieve owner's name and set full_name variable as owner's name
 
      print(full_name)
      if full_name is not None:
          # if user and password are right
          self.ex = Ui_chooseAccount()
+
+         self.ex.owner_name = full_name
+
          self.w = QtWidgets.QWidget()
          self.ex.setupUi(self.w)
-         # update name
-         self.ex.welcome_lbl.setText(self.ex.welcome_lbl.text() + " " + full_name)
          # update users accounts
 #         accounts = user.get_account_credentials(user_id)
          # account_number, balance, status

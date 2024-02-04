@@ -3,6 +3,7 @@
         "myclass.py",
         "ui_accountInfo.py",
         "ui_chooseAccount.py",
+        "ui_confirmTransaction.py",
         "ui_infoBox.py",
         "ui_mainPage.py",
         "ui_signUp.py",

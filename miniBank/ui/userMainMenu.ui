@@ -57,11 +57,6 @@
    </item>
    <item>
     <property name="text">
-     <string>account's owner</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
      <string>block account</string>
     </property>
    </item>

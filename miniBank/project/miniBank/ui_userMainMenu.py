@@ -14,10 +14,13 @@ from PySide2.QtWidgets import *
 from ui_infoBox import Ui_infoBox
 from ui_accountInfo import Ui_accountInfo
 from PySide2 import QtWidgets
+from ui_confirmTransaction import Ui_confirmTranaction
 
 
 
 class Ui_userMainMenu(object):
+    account_index = 0
+    owner_name = "default_name"
     def hideAll(self):
         #hide on start
         self.new_password_lbl.hide()
@@ -261,7 +264,7 @@ class Ui_userMainMenu(object):
             self.ex.label.setText("recent transactions: (based on time)")
 
 
-        if currentAction == "account's info" or currentAction == "account's owner":
+        if currentAction == "account's info":
             account_number = self.account_number_led.text()
             #alireza
             #retrieve data from database
@@ -283,10 +286,19 @@ class Ui_userMainMenu(object):
             amount = self.amount_led.text()
             #alireza
             #store transaction
-            self.ex = Ui_infoBox()
+            self.ex = Ui_confirmTranaction()
+            self.ex.amount = amount
+            self.ex.owner_name = self.owner_name
             self.w = QtWidgets.QWidget()
             self.ex.setupUi(self.w)
-            self.ex.label.setText("transaction completed")
+            self.ex.retranslateUi
+
+            #alireza
+            #set from, to, amount labels with proper amounts
+#            self.ex.from_lbl.setText(self.ex.from_lbl.text() +  )
+#            self.ex.to_lbl.setText(self.ex.to_lbl.text() +  )
+
+#            self.ex.retranslateUi
 
 
         if currentAction == "get new loan":
@@ -295,6 +307,8 @@ class Ui_userMainMenu(object):
             #check loan
             self.ex = Ui_infoBox()
             self.w = QtWidgets.QWidget()
+
+
             self.ex.setupUi(self.w)
 
             #alireza
@@ -359,7 +373,7 @@ class Ui_userMainMenu(object):
             self.end_date_lbl.show()
             self.end_date_led.show()
 
-        if currentAction == "account's info" or currentAction == "account's owner":
+        if currentAction == "account's info":
             self.hideAll()
             self.action_done_pbn.show()
             self.account_number_lbl.show()
