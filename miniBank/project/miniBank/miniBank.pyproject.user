@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 11.0.0, 2024-02-04T00:02:17. -->
+<!-- Written by QtCreator 11.0.0, 2024-02-04T07:09:46. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -142,14 +142,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">myclass.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/myclass.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/myclass.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{1fa20892-146b-4d3c-b3fc-9d0dc3b63ed6}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\myclass.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">myclass.py2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/myclass.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/myclass.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\myclass.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -159,13 +158,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_mainPage.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_mainPage.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_mainPage.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_mainPage.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_chooseAccount.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_chooseAccount.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_chooseAccount.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_chooseAccount.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.2">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -175,13 +174,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_chooseAccount.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_chooseAccount.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_chooseAccount.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_chooseAccount.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_infoBox.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_infoBox.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_infoBox.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_infoBox.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.3">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -191,13 +190,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_wrongPass.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_wrongPass.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_wrongPass.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_wrongPass.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_mainPage.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_mainPage.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_mainPage.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_mainPage.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.4">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -207,13 +206,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">user.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/user.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/user.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\user.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_signUp.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_signUp.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_signUp.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_signUp.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.5">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -223,13 +222,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_signUp.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_signUp.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_signUp.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_signUp.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_signUpResult.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_signUpResult.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_signUpResult.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_signUpResult.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.6">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -239,13 +238,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_signUpResult.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_signUpResult.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_signUpResult.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_signUpResult.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_userMainMenu.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_userMainMenu.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_userMainMenu.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_userMainMenu.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.7">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -255,13 +254,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_userMainMenu.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_userMainMenu.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_userMainMenu.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_userMainMenu.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_wrongPass.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_wrongPass.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_wrongPass.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_wrongPass.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.8">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -271,15 +270,31 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_infoBox.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_infoBox.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank/ui_infoBox.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database\miniBank\project\miniBank\ui_infoBox.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">user.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/user.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/user.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\user.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database/miniBank/project/miniBank</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
    </valuemap>
-   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">9</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.9">
+    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+    <valuelist type="QVariantList" key="CustomOutputParsers"/>
+    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ui_accountInfo.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_accountInfo.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank/ui_accountInfo.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Dotcom\Desktop\Bank_Database - Copy\miniBank\project\miniBank\ui_accountInfo.py</value>
+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Dotcom/Desktop/Bank_Database - Copy/miniBank/project/miniBank</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">10</value>
   </valuemap>
  </data>
  <data>

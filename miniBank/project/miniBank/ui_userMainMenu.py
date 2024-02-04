@@ -12,6 +12,9 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 from ui_infoBox import Ui_infoBox
+from ui_accountInfo import Ui_accountInfo
+from PySide2 import QtWidgets
+
 
 
 class Ui_userMainMenu(object):
@@ -219,34 +222,108 @@ class Ui_userMainMenu(object):
     @Slot()
     def doAction(self):
         currentAction = self.action_cmb.currentText()
+
         if currentAction == "change password":
             new_chosen_password = self.new_password_led.text()
             #alireza
             #store it in database
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            self.ex.label.setText("password changed.")
+
 
         if currentAction == "recent transactions":
-            pass
+            number_of_transactions = self.number_led.text()
+            #alireza
+            #retrieve data from database
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            self.ex.label.setText("recent transactions:")
+
 
         if currentAction == "transactions - time based":
-            pass
+            start_date = self.start_date_led.text()
+            end_date = self.end_date_led.text()
+            #alireza
+            #retrieve data from database
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            self.ex.label.setText("recent transactions: (based on time)")
+
 
         if currentAction == "account's info" or currentAction == "account's owner":
-            pass
+            account_number = self.account_number_led.text()
+            #alireza
+            #retrieve data from database
+            self.ex = Ui_accountInfo()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            #labels must be updated based on stored data
 
         if currentAction == "block account":
-            pass
+            #alireza
+            #remove current account from database
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            self.ex.label.setText("current account deleted from database")
 
         if currentAction == "transfer":
-            pass
+            destination_address = self.account_number_led.text()
+            amount = self.amount_led.text()
+            #alireza
+            #store transaction
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+            self.ex.label.setText("transaction completed")
+
 
         if currentAction == "get new loan":
-            pass
+            chosen_loan = self.loan_led.text()
+            #alireza
+            #store loan
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+
+            #alireza
+            # one of the following must be shown
+            self.ex.label.setText("loan recieved")
+            self.ex.label.setText("loan failed")
 
         if currentAction == "current loans":
-            pass
+            #alireza
+            #get loan from database
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+
+            #alireza
+            # one of the following must be shown
+            self.ex.label.setText("current loan:")
 
         if currentAction == "instalments":
-            pass
+            #alireza
+            #get loan's info from database
+            self.ex = Ui_infoBox()
+            self.w = QtWidgets.QWidget()
+            self.ex.setupUi(self.w)
+
+            #alireza
+            # one of the following must be shown
+            self.ex.label.setText("instalments:")
+
+        self.w.show()
+
+        # refresh ui
+        self.ex.retranslateUi
+        self.w.show()
+
+
 
 
     def actionChosen(self):
@@ -257,20 +334,6 @@ class Ui_userMainMenu(object):
             self.action_done_pbn.show()
             self.new_password_lbl.show()
             self.new_password_led.show()
-            new_chosen_password = self.new_password_led.text()
-            #alireza
-            #store it in database
-
-            self.ex = Ui_infoBox()
-            self.ex.label.setText("password changed.")
-            self.w = QtWidgets.QWidget()
-            self.ex.setupUi(self.w)
-            self.w.show()
-
-            # refresh ui
-            self.ex.retranslateUi
-            self.w.show()
-
 
         if currentAction == "recent transactions":
             self.hideAll()
@@ -299,23 +362,25 @@ class Ui_userMainMenu(object):
             pass
 
         if currentAction == "transfer":
-            hideAll()
+            self.hideAll()
             self.action_done_pbn.show()
             self.amount_lbl.show()
             self.amount_led.show()
+            self.account_number_lbl.show()
+            self.account_number_led.show()
 
         if currentAction == "get new loan":
             self.hideAll()
             self.action_done_pbn.show()
             self.loan_lbl.show()
             self.loan_cmb.show()
+            #alireza
+            #available loans must be inserted into self.loan_cmb
 
         if currentAction == "current loans":
             self.hideAll()
             self.action_done_pbn.show()
-            pass
 
         if currentAction == "instalments":
             self.hideAll()
             self.action_done_pbn.show()
-            pass
