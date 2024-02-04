@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>transactionHistory</class>
+ <widget class="QWidget" name="transactionHistory">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>961</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTableWidget" name="transation_history_tbl">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>921</width>
+     <height>541</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="source_account_lbl">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>src. account</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dest_account_lbl">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>60</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>dest. account</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="transaction_amount_lbl">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>60</y>
+     <width>191</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>transaction amount</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="balance_lbl">
+   <property name="geometry">
+    <rect>
+     <x>624</x>
+     <y>60</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>balance</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="date_lbl">
+   <property name="geometry">
+    <rect>
+     <x>714</x>
+     <y>60</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>date</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

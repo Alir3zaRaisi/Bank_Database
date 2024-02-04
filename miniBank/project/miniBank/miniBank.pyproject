@@ -5,9 +5,12 @@
         "ui_chooseAccount.py",
         "ui_confirmTransaction.py",
         "ui_infoBox.py",
+        "ui_instalments.py",
+        "ui_loans.py",
         "ui_mainPage.py",
         "ui_signUp.py",
         "ui_signUpResult.py",
+        "ui_transactionHistory.py",
         "ui_userMainMenu.py",
         "ui_wrongPass.py",
         "user.py"

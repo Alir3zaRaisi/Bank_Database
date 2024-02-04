@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>instalments</class>
+ <widget class="QWidget" name="instalments">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>19</y>
+     <width>301</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="num_of_paids_lbl">
+      <property name="text">
+       <string>#paids: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="num_of_unpaids_lbl">
+      <property name="text">
+       <string>#unpaids: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="sum_of_remainings_lbl">
+      <property name="text">
+       <string>sum(remainings): </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="sum_of_paids_lbl">
+      <property name="text">
+       <string>sum(paids): </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="ok_pbn">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>230</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ok_pbn</sender>
+   <signal>clicked()</signal>
+   <receiver>instalments</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

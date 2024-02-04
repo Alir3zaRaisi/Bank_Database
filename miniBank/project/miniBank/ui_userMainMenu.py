@@ -12,10 +12,15 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+from ui_transactionHistory import Ui_transactionHistory
+from ui_loans import Ui_loans
+from ui_instalments import Ui_instalments
+
 from ui_infoBox import Ui_infoBox
 from ui_accountInfo import Ui_accountInfo
 from PySide2 import QtWidgets
 from ui_confirmTransaction import Ui_confirmTranaction
+
 
 
 class Ui_userMainMenu(object):
@@ -38,6 +43,8 @@ class Ui_userMainMenu(object):
         self.loan_point_lbl.hide()
         self.loan_amount_lbl.hide()
         self.loan_amount_led.hide()
+        self.loan_number_lbl.hide()
+        self.loan_number_led.hide()
         self.action_done_pbn.hide()
 
 
@@ -65,7 +72,7 @@ class Ui_userMainMenu(object):
         self.action_pbn.setGeometry(QRect(40, 220, 93, 28))
         self.formLayoutWidget = QWidget(userMainMenu)
         self.formLayoutWidget.setObjectName(u"formLayoutWidget")
-        self.formLayoutWidget.setGeometry(QRect(222, 100, 451, 261))
+        self.formLayoutWidget.setGeometry(QRect(222, 100, 451, 280))
         self.chosenAction_lyt = QFormLayout(self.formLayoutWidget)
         self.chosenAction_lyt.setObjectName(u"chosenAction_lyt")
         self.chosenAction_lyt.setContentsMargins(0, 0, 0, 0)
@@ -83,13 +90,13 @@ class Ui_userMainMenu(object):
 
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.chosenAction_lyt.setItem(7, QFormLayout.LabelRole, self.horizontalSpacer)
+        self.chosenAction_lyt.setItem(8, QFormLayout.LabelRole, self.horizontalSpacer)
 
         self.action_done_pbn = QPushButton(self.formLayoutWidget)
         self.action_done_pbn.setObjectName(u"action_done_pbn")
         self.action_done_pbn.setEnabled(True)
 
-        self.chosenAction_lyt.setWidget(7, QFormLayout.FieldRole, self.action_done_pbn)
+        self.chosenAction_lyt.setWidget(8, QFormLayout.FieldRole, self.action_done_pbn)
 
         self.number_lbl = QLabel(self.formLayoutWidget)
         self.number_lbl.setObjectName(u"number_lbl")
@@ -172,6 +179,16 @@ class Ui_userMainMenu(object):
 
         self.chosenAction_lyt.setLayout(6, QFormLayout.FieldRole, self.horizontalLayout)
 
+        self.loan_number_lbl = QLabel(self.formLayoutWidget)
+        self.loan_number_lbl.setObjectName(u"loan_number_lbl")
+
+        self.chosenAction_lyt.setWidget(7, QFormLayout.LabelRole, self.loan_number_lbl)
+
+        self.loan_number_led = QLineEdit(self.formLayoutWidget)
+        self.loan_number_led.setObjectName(u"loan_number_led")
+
+        self.chosenAction_lyt.setWidget(7, QFormLayout.FieldRole, self.loan_number_led)
+
         self.horizontalLayoutWidget = QWidget(userMainMenu)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
         self.horizontalLayoutWidget.setGeometry(QRect(10, 10, 151, 61))
@@ -188,19 +205,16 @@ class Ui_userMainMenu(object):
 
         self.balance_lyt.addWidget(self.balance_lbl)
 
-
-        self.retranslateUi(userMainMenu)
-
-        QMetaObject.connectSlotsByName(userMainMenu)
         self.hideAll()
         #connect
         self.action_pbn.clicked.connect(self.actionChosen)
         self.action_done_pbn.clicked.connect(self.doAction)
+
+
+        self.retranslateUi(userMainMenu)
+
+        QMetaObject.connectSlotsByName(userMainMenu)
     # setupUi
-
-
-
-
 
     def retranslateUi(self, userMainMenu):
         userMainMenu.setWindowTitle(QCoreApplication.translate("userMainMenu", u"Form", None))
@@ -225,6 +239,7 @@ class Ui_userMainMenu(object):
         self.amount_lbl.setText(QCoreApplication.translate("userMainMenu", u"amount: ", None))
         self.loan_point_lbl.setText(QCoreApplication.translate("userMainMenu", u"loan point: ", None))
         self.loan_amount_lbl.setText(QCoreApplication.translate("userMainMenu", u"loan amount: ", None))
+        self.loan_number_lbl.setText(QCoreApplication.translate("userMainMenu", u"loan number: ", None))
         self.const_lbl.setText(QCoreApplication.translate("userMainMenu", u"current balance:", None))
         self.balance_lbl.setText(QCoreApplication.translate("userMainMenu", u"0", None))
     # retranslateUi
@@ -248,10 +263,9 @@ class Ui_userMainMenu(object):
             number_of_transactions = self.number_led.text()
             #alireza
             #retrieve data from database
-            self.ex = Ui_infoBox()
+            self.ex = Ui_transactionHistory()
             self.w = QtWidgets.QWidget()
             self.ex.setupUi(self.w)
-            self.ex.label.setText("recent transactions:")
 
 
         if currentAction == "transactions - time based":
@@ -259,7 +273,7 @@ class Ui_userMainMenu(object):
             end_date = self.end_date_led.text()
             #alireza
             #retrieve data from database
-            self.ex = Ui_infoBox()
+            self.ex = Ui_transactionHistory()
             self.w = QtWidgets.QWidget()
             self.ex.setupUi(self.w)
             self.ex.label.setText("recent transactions: (based on time)")
@@ -322,24 +336,19 @@ class Ui_userMainMenu(object):
         if currentAction == "current loans":
             #alireza
             #get loan from database
-            self.ex = Ui_infoBox()
+            self.ex = Ui_loans()
             self.w = QtWidgets.QWidget()
             self.ex.setupUi(self.w)
 
-            #alireza
-            # one of the following must be shown
-            self.ex.label.setText("current loan:")
 
         if currentAction == "instalments":
             #alireza
             #get loan's info from database
-            self.ex = Ui_infoBox()
+            self.ex = Ui_instalments()
             self.w = QtWidgets.QWidget()
             self.ex.setupUi(self.w)
 
             #alireza
-            # one of the following must be shown
-            self.ex.label.setText("instalments:")
 
         self.w.show()
 
@@ -408,6 +417,9 @@ class Ui_userMainMenu(object):
 
         if currentAction == "instalments":
             self.hideAll()
+            self.loan_number_lbl.show()
+            self.loan_number_led.show()
             self.action_done_pbn.show()
+
 
 
