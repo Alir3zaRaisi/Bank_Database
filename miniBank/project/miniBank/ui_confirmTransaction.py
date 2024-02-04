@@ -11,26 +11,27 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
 from ui_infoBox import Ui_infoBox
 from PySide2 import QtWidgets
-
 
 class Ui_confirmTranaction(object):
     owner_name = "default name"
     amount = 1
+
     def setupUi(self, confirmTranaction):
         if not confirmTranaction.objectName():
             confirmTranaction.setObjectName(u"confirmTranaction")
         confirmTranaction.resize(400, 300)
         self.from_lbl = QLabel(confirmTranaction)
         self.from_lbl.setObjectName(u"from_lbl")
-        self.from_lbl.setGeometry(QRect(20, 40, 55, 16))
+        self.from_lbl.setGeometry(QRect(20, 40, 371, 16))
         self.to_lbl = QLabel(confirmTranaction)
         self.to_lbl.setObjectName(u"to_lbl")
-        self.to_lbl.setGeometry(QRect(20, 100, 55, 16))
+        self.to_lbl.setGeometry(QRect(20, 100, 641, 16))
         self.amount_lbl = QLabel(confirmTranaction)
         self.amount_lbl.setObjectName(u"amount_lbl")
-        self.amount_lbl.setGeometry(QRect(20, 140, 55, 16))
+        self.amount_lbl.setGeometry(QRect(20, 140, 331, 16))
         self.label_4 = QLabel(confirmTranaction)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(10, 180, 361, 71))
@@ -40,6 +41,7 @@ class Ui_confirmTranaction(object):
 
         #connect
         self.confirm_pbn.clicked.connect(self.doTransaction)
+
 
         self.retranslateUi(confirmTranaction)
 
@@ -56,6 +58,7 @@ class Ui_confirmTranaction(object):
         self.from_lbl.setText("from: " + self.owner_name)
         self.amount_lbl.setText("amount: " + self.amount)
     # retranslateUi
+
 
     @Slot()
     def doTransaction(self):

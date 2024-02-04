@@ -29,7 +29,7 @@ class Ui_chooseAccount(object):
         self.choose_account_lbl.setGeometry(QRect(60, 110, 281, 31))
         self.welcome_lbl = QLabel(chooseAccount)
         self.welcome_lbl.setObjectName(u"welcome_lbl")
-        self.welcome_lbl.setGeometry(QRect(60, 50, 81, 16))
+        self.welcome_lbl.setGeometry(QRect(60, 50, 261, 16))
         self.OK_pbn = QPushButton(chooseAccount)
         self.OK_pbn.setObjectName(u"OK_pbn")
         self.OK_pbn.setGeometry(QRect(280, 240, 93, 28))
@@ -49,6 +49,7 @@ class Ui_chooseAccount(object):
         self.OK_pbn.setText(QCoreApplication.translate("chooseAccount", u"OK", None))
         self.welcome_lbl.setText("welcome " + self.owner_name + "!")
     # retranslateUi
+
 
     @Slot()
     def accountChosen(self):

@@ -11,11 +11,11 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
 from ui_infoBox import Ui_infoBox
 from ui_accountInfo import Ui_accountInfo
 from PySide2 import QtWidgets
 from ui_confirmTransaction import Ui_confirmTranaction
-
 
 
 class Ui_userMainMenu(object):
@@ -49,7 +49,6 @@ class Ui_userMainMenu(object):
         self.choose_lbl.setObjectName(u"choose_lbl")
         self.choose_lbl.setGeometry(QRect(10, 70, 261, 41))
         self.action_cmb = QComboBox(userMainMenu)
-        self.action_cmb.addItem("")
         self.action_cmb.addItem("")
         self.action_cmb.addItem("")
         self.action_cmb.addItem("")
@@ -190,16 +189,18 @@ class Ui_userMainMenu(object):
         self.balance_lyt.addWidget(self.balance_lbl)
 
 
-        self.hideAll()
-               #connect
-        self.action_pbn.clicked.connect(self.actionChosen)
-        self.action_done_pbn.clicked.connect(self.doAction)
-
-
         self.retranslateUi(userMainMenu)
 
         QMetaObject.connectSlotsByName(userMainMenu)
+        self.hideAll()
+        #connect
+        self.action_pbn.clicked.connect(self.actionChosen)
+        self.action_done_pbn.clicked.connect(self.doAction)
     # setupUi
+
+
+
+
 
     def retranslateUi(self, userMainMenu):
         userMainMenu.setWindowTitle(QCoreApplication.translate("userMainMenu", u"Form", None))
@@ -208,12 +209,11 @@ class Ui_userMainMenu(object):
         self.action_cmb.setItemText(1, QCoreApplication.translate("userMainMenu", u"recent transactions", None))
         self.action_cmb.setItemText(2, QCoreApplication.translate("userMainMenu", u"transactions - time based", None))
         self.action_cmb.setItemText(3, QCoreApplication.translate("userMainMenu", u"account's info", None))
-        self.action_cmb.setItemText(4, QCoreApplication.translate("userMainMenu", u"account's owner", None))
-        self.action_cmb.setItemText(5, QCoreApplication.translate("userMainMenu", u"block account", None))
-        self.action_cmb.setItemText(6, QCoreApplication.translate("userMainMenu", u"transfer", None))
-        self.action_cmb.setItemText(7, QCoreApplication.translate("userMainMenu", u"get new loan", None))
-        self.action_cmb.setItemText(8, QCoreApplication.translate("userMainMenu", u"current loans", None))
-        self.action_cmb.setItemText(9, QCoreApplication.translate("userMainMenu", u"instalments", None))
+        self.action_cmb.setItemText(4, QCoreApplication.translate("userMainMenu", u"block account", None))
+        self.action_cmb.setItemText(5, QCoreApplication.translate("userMainMenu", u"transfer", None))
+        self.action_cmb.setItemText(6, QCoreApplication.translate("userMainMenu", u"get new loan", None))
+        self.action_cmb.setItemText(7, QCoreApplication.translate("userMainMenu", u"current loans", None))
+        self.action_cmb.setItemText(8, QCoreApplication.translate("userMainMenu", u"instalments", None))
 
         self.action_pbn.setText(QCoreApplication.translate("userMainMenu", u"OK", None))
         self.new_password_lbl.setText(QCoreApplication.translate("userMainMenu", u"new password:", None))
@@ -228,6 +228,7 @@ class Ui_userMainMenu(object):
         self.const_lbl.setText(QCoreApplication.translate("userMainMenu", u"current balance:", None))
         self.balance_lbl.setText(QCoreApplication.translate("userMainMenu", u"0", None))
     # retranslateUi
+
 
     @Slot()
     def doAction(self):
@@ -295,10 +296,10 @@ class Ui_userMainMenu(object):
 
             #alireza
             #set from, to, amount labels with proper amounts
-#            self.ex.from_lbl.setText(self.ex.from_lbl.text() +  )
-#            self.ex.to_lbl.setText(self.ex.to_lbl.text() +  )
+    #            self.ex.from_lbl.setText(self.ex.from_lbl.text() +  )
+    #            self.ex.to_lbl.setText(self.ex.to_lbl.text() +  )
 
-#            self.ex.retranslateUi
+    #            self.ex.retranslateUi
 
 
         if currentAction == "get new loan":
@@ -345,8 +346,6 @@ class Ui_userMainMenu(object):
         # refresh ui
         self.ex.retranslateUi
         self.w.show()
-
-
 
 
     def actionChosen(self):
@@ -410,4 +409,5 @@ class Ui_userMainMenu(object):
         if currentAction == "instalments":
             self.hideAll()
             self.action_done_pbn.show()
+
 
